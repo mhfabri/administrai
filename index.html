@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/administrai.png" type="image/x-icon">
+  <title>Quiz Financeiro - AdministrAI</title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="img/administrai.png" alt="Logo AdministrAI">
+    </div>
+</header>
+<h1 class="mt-3 fw-bold text-primary text-center">Quiz - Descubra seu Perfil Financeiro</h1>
+<p class="text-secondary text-center">Responda e descubra se você é conservador, moderado ou arrojado!</p>
+
+  <main class="container">
+    <div class="quiz-card mx-auto col-lg-8 col-md-10">
+
+      <!-- Barra de progresso -->
+      <div class="progress mb-4">
+        <div id="progress-bar" class="progress-bar bg-primary" style="width: 0%">0%</div>
+      </div>
+
+      <form id="quizForm">
+        <!-- Perguntas -->
+        <div class="question" id="q1">
+          <label class="form-label fw-semibold">1. Qual é o seu nível de conhecimento sobre investimentos?</label>
+          <div>
+            <input type="radio" name="q1" value="A" class="form-check-input"> A) Nenhum ou quase nenhum, conheço só poupança.<br>
+            <input type="radio" name="q1" value="B" class="form-check-input"> B) Sei o básico, já ouvi falar em CDB, Tesouro, ações.<br>
+            <input type="radio" name="q1" value="C" class="form-check-input"> C) Tenho experiência, já investi em diferentes produtos.<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q2">
+          <label class="form-label fw-semibold">2. O que você faria se seus investimentos caíssem 10% em um mês?</label>
+          <div>
+            <input type="radio" name="q2" value="A" class="form-check-input"> A) Venderia imediatamente para evitar perder mais.<br>
+            <input type="radio" name="q2" value="B" class="form-check-input"> B) Esperaria para ver se o mercado se recupera.<br>
+            <input type="radio" name="q2" value="C" class="form-check-input"> C) Aproveitaria para comprar mais, já que pode ser oportunidade.<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q3">
+          <label class="form-label fw-semibold">3. Qual é o principal objetivo dos seus investimentos?</label>
+          <div>
+            <input type="radio" name="q3" value="A" class="form-check-input"> A) Segurança, preservar meu dinheiro.<br>
+            <input type="radio" name="q3" value="B" class="form-check-input"> B) Crescimento moderado, equilibrando segurança e risco.<br>
+            <input type="radio" name="q3" value="C" class="form-check-input"> C) Acumular patrimônio no longo prazo, mesmo com volatilidade.<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q4">
+          <label class="form-label fw-semibold">4. Por quanto tempo você pretende manter seus investimentos antes de precisar do dinheiro?</label>
+          <div>
+            <input type="radio" name="q4" value="A" class="form-check-input"> A) Menos de 1 ano.<br>
+            <input type="radio" name="q4" value="B" class="form-check-input"> B) Entre 1 e 5 anos.<br>
+            <input type="radio" name="q4" value="C" class="form-check-input"> C) Mais de 5 anos.<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q5">
+          <label class="form-label fw-semibold">5. Qual seria a sua reação se seu investimento rendesse menos que a poupança por 6 meses?</label>
+          <div>
+            <input type="radio" name="q5" value="A" class="form-check-input"> A) Frustração total, retiraria o dinheiro.<br>
+            <input type="radio" name="q5" value="B" class="form-check-input"> B) Ficaria incomodado, mas manteria o investimento por mais tempo.<br>
+            <input type="radio" name="q5" value="C" class="form-check-input"> C) Tranquilo, sei que investimentos variam no curto prazo.<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q6">
+          <label class="form-label fw-semibold">6. Quanto da sua renda mensal você estaria disposto a investir em aplicações de maior risco?</label>
+          <div>
+            <input type="radio" name="q6" value="A" class="form-check-input"> A) 0 a 10%<br>
+            <input type="radio" name="q6" value="B" class="form-check-input"> B) 10% a 30%<br>
+            <input type="radio" name="q6" value="C" class="form-check-input"> C) Mais de 30%<br>
+          </div>
+        </div>
+
+        <div class="question d-none" id="q7">
+          <label class="form-label fw-semibold">7. Como você se informa sobre o mercado financeiro?</label>
+          <div>
+            <input type="radio" name="q7" value="A" class="form-check-input"> A) Não acompanho nada ou só notícias básicas.<br>
+            <input type="radio" name="q7" value="B" class="form-check-input"> B) Leio conteúdos em blogs, redes sociais e consulto especialistas.<br>
+            <input type="radio" name="q7" value="C" class="form-check-input"> C) Estudo com frequência, acompanho indicadores, relatórios e tendências.<br>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="button" id="nextBtn" class="btn btn-custom">Próximo</button>
+        </div>
+      </form>
+
+      <div id="result" class="alert alert-info mt-4"></div>
+    </div>
+  </main>
+
+  <footer class="mt-5">
+    <p>Desenvolvido por <a href="https://github.com/mhfabri">< / mhfabri ></a></p>
+  </footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
